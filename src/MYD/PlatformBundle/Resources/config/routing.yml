@@ -1,0 +1,35 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+myd_platform_home:
+    path:      /{page}
+    defaults: 
+        _controller: MYDPlatformBundle:Advert:index
+        page:    1
+    requirements: 
+        page: \d*
+    
+myd_platform_view:
+    path:      /advert/{id}
+    defaults: 
+        _controller: MYDPlatformBundle:Advert:view
+    requirements: 
+        id: \d+
+    
+myd_platform_add:
+    path:      /add
+    defaults: 
+        _controller: MYDPlatformBundle:Advert:add
+
+myd_platform_edit:
+    path:      /edit/{id}
+    defaults: 
+        _controller: MYDPlatformBundle:Advert:edit
+    requirements: 
+        id: \d+
+
+myd_platform_delete:
+    path:      /delete/{id}
+    defaults: 
+        _controller: MYDPlatformBundle:Advert:delete
+    requirements: 
+        id: \d+

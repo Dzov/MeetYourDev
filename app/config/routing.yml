@@ -1,0 +1,4 @@
+myd_platform:
+    resource: "@MYDPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
