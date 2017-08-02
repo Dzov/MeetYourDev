@@ -2,3 +2,9 @@ myd_platform:
     resource: "@MYDPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform
 
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
