@@ -2,6 +2,11 @@ myd_platform:
     resource: "@MYDPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform
 
+myd_home:
+    path:      /
+    defaults: 
+        _controller: MYDPlatformBundle:Home:index
+
 admin_area:
     resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
     prefix: /admin

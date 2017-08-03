@@ -5,14 +5,28 @@
 {% endblock %}
 
 {% block body %}
+  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
+  <div class="row">
+    <div id="menu" class="col-md-3">
+      <h3>Les annonces</h3>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="{{ path('myd_platform_home') }}">Accueil</a></li>
+        <li><a href="{{ path('myd_platform_add') }}">Ajouter une annonce</a></li>
+      </ul>
+
+      <h4>Dernières annonces</h4>
+      {{ render(controller("MYDPlatformBundle:Advert:menu", {'limit': 3})) }}
+    </div>
+    <div id="content" class="col-md-9">
+      {% block mydplatform_body %}
+      {% endblock %}
+    </div>
+  </div>
   {# On définit un sous-titre commun à toutes les pages du bundle, par exemple #}
   <h1>Annonces</h1>
-
-  <hr>
-
-  {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
-  {% block mydplatform_body %}
-  {% endblock %}
+  {% else %}
+    {{ parent() }}
+  {% endif %}
 
 {% endblock %}
