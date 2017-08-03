@@ -7,20 +7,20 @@
   <title>{% block title %}Meet Your Dev{% endblock %}</title>
 
   {% block stylesheets %}
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="{{ asset('bundles/mydplatform/css/master.css') }}" rel="stylesheet">
   {% endblock %}
 </head>
 
 <body>
-  <header>
-    <a href="/platform">
+  <header class="header flex">
+    <a href="/platform" class="header__brand">
       <img src="">
-      <h1>Meet Your Dev</h1>
+      <h1>Meet Your Dev <br> <span></span></h1>
     </a>
-    <nav>
-      <ul>
+    <nav class="header__nav selfCenter">
+      <ul class="flex justifyBetween">
         {% if is_granted('ROLE_USER') %}
-        <li><a class="weight" href="/profile">{{ app.user.username | capitalize }}</a></li>
+        <li><a class="" href="/profile">{{ app.user.username | capitalize }}</a></li>
         <li><a class="" href="/logout">Déconnexion</a></li>
         {% else %}
         <li><a class="" href="/register">Inscription</a></li>
@@ -34,12 +34,16 @@
     </nav>
   </header>
 
+  
   {% block body %}
   <main>
-    <h1>Bienvenue ! </h1>
-    <p>Inscrivez-vous pour poster une annonce ou proposer vos services de développeurs en devenir</p>
+    <section class="mainSection welcome__section">
+      <h1 class="welcome__title">Bienvenue ! </h1>
+      <p class="welcome__intro">Inscrivez-vous pour poster une annonce ou proposer vos services de développeurs en devenir</p>
+    </section>
   </main>
   {% endblock %}
+  
 
   <hr>
 
@@ -48,9 +52,6 @@
   </footer>
 
   {% block javascripts %}
-  {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   {% endblock %}
 
 </body>

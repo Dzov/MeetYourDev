@@ -1,0 +1,18 @@
+.advert {
+
+  &__header{
+  border: 1px solid lightblue;
+  padding: 20px; 
+
+    &--title {
+      
+    }
+  }
+
+  &__content {
+    padding: 20px; 
+  }
+
+  &__nav {
+  }
+}

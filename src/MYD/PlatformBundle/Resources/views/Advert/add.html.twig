@@ -1,20 +1,18 @@
-{% extends "MYDPlatformBundle::layout.html.twig" %}
+{% extends "MYDPlatformBundle:Advert:index.html.twig" %}
 
 {% block title %}
   Ajouter une annonce - {{ parent() }}
 {% endblock %}
 
-{% block mydplatform_body %}
+{% block advert_body %}
+    <h2>Ajouter une annonce</h2>
 
-  <h2>Ajouter une annonce</h2>
+    {{ include("MYDPlatformBundle:Advert:form.html.twig") }}
 
-  {{ include("MYDPlatformBundle:Advert:form.html.twig") }}
-
-  <p>
-    <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
-      <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à l'accueil
-    </a>
-  </p>
-
+    <p>
+      <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Retour à l'accueil
+      </a>
+    </p>
 {% endblock %}
