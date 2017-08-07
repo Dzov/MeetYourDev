@@ -1,15 +1,14 @@
-{% extends "MYDPlatformBundle::layout.html.twig" %}
+{% extends "MYDPlatformBundle:Advert:index.html.twig" %}
 
 {% block title %}
-  Modifier une annonce - {{ parent() }}
+Modifier une annonce - {{ parent() }}
 {% endblock %}
 
-{% block mydplatform_body %}
+{% block advert_body %}
 
   <h2>Modifier une annonce</h2>
 
   {{ include("MYDPlatformBundle:Advert:form.html.twig") }}
-
   <p>
     Vous éditez une annonce déjà existante, merci de ne pas changer
     l'esprit général de l'annonce déjà publiée.
@@ -21,5 +20,4 @@
       Retour à l'annonce
     </a>
   </p>
-
 {% endblock %}

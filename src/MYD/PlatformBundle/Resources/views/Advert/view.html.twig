@@ -1,31 +1,39 @@
-{% extends "MYDPlatformBundle::layout.html.twig" %}
+{% extends "MYDPlatformBundle:Advert:index.html.twig" %}
 
 {% block title %}
-  Lecture d'une annonce - {{ parent() }}
+Lecture d'une annonce - {{ parent() }}
 {% endblock %}
 
-{% block mydplatform_body %}
+{% block advert_body %}
 
-  <h2>{{ advert.title }}</h2>
-  <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
+  <article class="advert">
+    <header class="advert__header">
+      <h2 class="advert__header--title">{{ advert.title }}</h2>
+      <i class="advert__header--authorInfo">Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
+    </header>
 
-  <div class="well">
-    {{ advert.content }}
-  </div>
+    <main class="advert__content">
+      <h3>Descriptif du projet</h3>
+      {{ advert.content }}
+    </main>
+  </article>
 
-  <p>
-    <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
-      <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à la liste
-    </a>
-    <a href="{{ path('myd_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
-      <i class="glyphicon glyphicon-edit"></i>
-      Modifier l'annonce
-    </a>
-    <a href="{{ path('myd_platform_delete', {'id': advert.id}) }}" class="btn btn-danger">
-      <i class="glyphicon glyphicon-trash"></i>
-      Supprimer l'annonce
-    </a>
-  </p>
-
+  <nav class="advert__nav">
+    <ul>
+      <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Retour à la liste
+      </a>
+      <a href="{{ path('myd_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
+        <i class="glyphicon glyphicon-edit"></i>
+        Modifier l'annonce
+      </a>
+      <a href="{{ path('myd_platform_delete', {'id': advert.id}) }}" class="btn btn-danger">
+        <i class="glyphicon glyphicon-trash"></i>
+        Supprimer l'annonce
+      </a>
+    </ul>
+  </nav>
 {% endblock %}
+
+

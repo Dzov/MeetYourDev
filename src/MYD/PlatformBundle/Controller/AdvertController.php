@@ -27,19 +27,43 @@ class AdvertController extends Controller
         'title'   => 'Recherche développpeur Symfony',
         'id'      => 1,
         'author'  => 'Alexandre',
-        'content' => 'Nous recherchons un développeur Symfony débutant sur Lyon. Blabla…',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
         'date'    => new \Datetime()),
       array(
         'title'   => 'Mission de webmaster',
         'id'      => 2,
         'author'  => 'Hugo',
-        'content' => 'Nous recherchons un webmaster capable de maintenir notre site internet. Blabla…',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
         'date'    => new \Datetime()),
       array(
         'title'   => 'Offre de stage webdesigner',
         'id'      => 3,
         'author'  => 'Mathieu',
-        'content' => 'Nous proposons un poste pour webdesigner. Blabla…',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()), 
+      array(
+        'title'   => 'Mission de webmaster',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
         'date'    => new \Datetime())
     );
 
@@ -55,7 +79,7 @@ class AdvertController extends Controller
       'title'   => 'Recherche développpeur Symfony2',
       'id'      => $id,
       'author'  => 'Alexandre',
-      'content' => 'Nous recherchons un développeur Symfony2 débutant sur Lyon. Blabla…',
+      'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
       'date'    => new \Datetime()
     );
 
@@ -99,7 +123,7 @@ class AdvertController extends Controller
       'title'   => 'Recherche développpeur Symfony',
       'id'      => $id,
       'author'  => 'Alexandre',
-      'content' => 'Nous recherchons un développeur Symfony débutant sur Lyon. Blabla…',
+      'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
       'date'    => new \Datetime()
     );
 
