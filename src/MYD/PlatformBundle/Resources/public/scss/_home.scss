@@ -1,0 +1,66 @@
+/*  Markup 
+
+<div class="home__tabHeader">
+      <button class="home__tab" onclick="openTab('ad')" >Annonces</button>
+      <button class="home__tab" onclick="openTab('profiles')">Profils</button>
+    </div>
+    <div class="tab home__adverts" id="ad">
+      <h2 class="home__adverts--title">Liste des annonces</h2>
+      <div class="home__advert--container flex">
+        {% for advert in listAdverts %}
+        <article class="flexColumn home__advert">
+          <a href="{{ path('myd_platform_view', {'id': advert.id}) }}">
+            {{ advert.title }}
+          </a>
+          <span>
+            par {{ advert.author }},
+            le {{ advert.date|date('d/m/Y') }}
+          </span>
+        </article>
+        {% else %}
+        <p>Pas (encore !) d'annonces</p>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+
+*/
+
+.home {
+
+  &__tabHeader {
+    padding: 20px; 
+    background-color: $primary_color; 
+  }
+
+  &__tab {
+    padding: 5px 10px; 
+    border: none;
+    background-color: inherit;
+    font-size: 17px; 
+    color: white;
+  }
+
+  &__content {
+    padding: 20px; 
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

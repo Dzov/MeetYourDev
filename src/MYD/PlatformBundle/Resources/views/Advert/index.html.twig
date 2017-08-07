@@ -6,36 +6,74 @@
 
 {% block mydplatform_body %}
 <main class="flex">
-  <section class="mainSection sidebar__section">
-    <h3>Les annonces</h3>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="{{ path('myd_platform_home') }}">Accueil</a></li>
-      <li><a href="{{ path('myd_platform_add') }}">Ajouter une annonce</a></li>
-    </ul>
+  
+  {{ include("MYDPlatformBundle:Advert:sidebar.html.twig") }}
 
-    <hr>
+  <section class="centerContainer box flex2">
+    {% block advert_body %}
+    <div class="home__tabHeader">
+      <button class="home__tab" onclick="openTab('ad')" >Annonces</button>
+      <button class="home__tab" onclick="openTab('profiles')">Profils</button>
+    </div>
+    <div class="tab home__content" id="ad">
+      <div class="home__card--container flex justifyBetween">
+        {% for advert in listAdverts %}
+        <article class="flexColumn home__card home__advert">
+          <a href="{{ path('myd_platform_view', {'id': advert.id}) }}">
+            {{ advert.title }}
+          </a>
+          <span>
+            par {{ advert.author }},
+            le {{ advert.date|date('d/m/Y') }}
+          </span>
+        </article>
+        {% else %}
+        <p>Pas (encore !) d'annonces</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="tab home__content" id="profiles" style="display: none;">
+      <div class="home__card--container flex justifyBetween">
+        <article class="flexColumn home__card home__card--profile">
+          <a href="">
+            Johnny
+          </a>
+          <span>
+            Developpeur PHP, 
+            Disponible de suite
+          </span>
+        </article>
+               <article class="flexColumn home__card home__card--profile">
+          <a href="">
+            Johnny
+          </a>
+          <span>
+            Developpeur PHP, 
+            Disponible de suite
+          </span>
+        </article>
+               <article class="flexColumn home__card home__card--profile">
+          <a href="">
+            Johnny
+          </a>
+          <span>
+            Developpeur PHP, 
+            Disponible de suite
+          </span>
+        </article>
+               <article class="flexColumn home__card home__card--profile">
+          <a href="">
+            Johnny
+          </a>
+          <span>
+            Developpeur PHP, 
+            Disponible de suite
+          </span>
+        </article>
 
-    <h4>Dernières annonces</h4>
-    {{ render(controller("MYDPlatformBundle:Advert:menu", {'limit': 3})) }}
-  </section>
-
-  <section class="mainSection flexColumn itemsCenter flex2">
-  {% block advert_body %}
-    <h2>Liste des annonces</h2>
-    <ul>
-      {% for advert in listAdverts %}
-      <li>
-        <a href="{{ path('myd_platform_view', {'id': advert.id}) }}">
-          {{ advert.title }}
-        </a>
-        par {{ advert.author }},
-        le {{ advert.date|date('d/m/Y') }}
-      </li>
-      {% else %}
-      <li>Pas (encore !) d'annonces</li>
-      {% endfor %}
-    </ul>
-  {% endblock %}
+      </div>
+    </div>
+    {% endblock %}
   </section>
 
 </main>

@@ -40,6 +40,30 @@ class AdvertController extends Controller
         'id'      => 3,
         'author'  => 'Mathieu',
         'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()), 
+      array(
+        'title'   => 'Mission de webmaster',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
+        'date'    => new \Datetime()),
+      array(
+        'title'   => 'Lorem ipsum',
+        'id'      => 2,
+        'author'  => 'Hugo',
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sunt tempora, iure consequatur hic molestiae laboriosam pariatur facere. Laboriosam nihil aliquam labore odit consequatur, eveniet, illo hic pariatur veniam tempore!',
         'date'    => new \Datetime())
     );
 

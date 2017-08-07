@@ -11,11 +11,20 @@ gulp.task('sass', function () {
     ));
 });
 
+gulp.task('js', function() {
+    gulp.src([
+            './src/MYD/PlatformBundle/Resources/public/js/*.js'
+        ])
+        .pipe(gulp.dest('./web/bundles/mydplatform/js/'));
+});
+
 gulp.task('watch', function () {
     var onChange = function (event) {
         console.log('File '+event.path+' has been '+event.type);
     };
     gulp.watch('./src/MYD/PlatformBundle/Resources/public/scss/*.scss', ['sass'])
+        .on('change', onChange);
+    gulp.watch('./src/MYD/PlatformBundle/Resources/public/js/*.js', ['js'])
         .on('change', onChange);
 });
 

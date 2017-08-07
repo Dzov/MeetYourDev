@@ -20,13 +20,21 @@ h1, h2, h3, h4, h5, h6 {
 body {
   width: 100%; 
   height: 100vh; 
+  background-color: $light_grey; 
+  color: $dark_grey;
 }
 
 main {
-  padding: 0 20px; 
+  padding: 20px; 
 }
 
 .mainSection {
   padding: 20px;
-  margin: 0 40px; 
+}
+
+.box {
+  background-color: white; 
+  border-radius: 5px; 
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 6px lightgrey; 
 }
