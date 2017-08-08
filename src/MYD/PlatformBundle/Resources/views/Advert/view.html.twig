@@ -6,34 +6,60 @@ Lecture d'une annonce - {{ parent() }}
 
 {% block advert_body %}
 
-  <article class="advert">
-    <header class="advert__header">
+<article class="advert">
+  <header class="advert__header flex justifyBetween" >
+    {% if advert.image is not null %}
+    <div class="flex1">
+      <img src="{{ advert.image.url }}" alt='{{ advert.image.alt }}'>
+    </div>
+    {% endif %}
+    <div class="flex1">
       <h2 class="advert__header--title">{{ advert.title }}</h2>
       <i class="advert__header--authorInfo">Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
-    </header>
+      <ul>
+        {% for category in advert.categories %}
+        <li>{{ category.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
 
-    <main class="advert__content">
+  <main class="advert__content ">
+    <section class="advert__description ">
       <h3>Descriptif du projet</h3>
-      {{ advert.content }}
-    </main>
-  </article>
+      <p>{{ advert.content }}</p>
+    </section>
+    {% if applications is not null %}
+    <section class="advert__applications">
+      <h3>Candidats</h3>
+      <ul class="flex justifyAround">
+        {% for application in applications %}
+        <li>
+          <p> {{ application.content }} <br> {{ application.author }} </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </main>
+</article>
 
-  <nav class="advert__nav">
-    <ul>
-      <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
-        <i class="glyphicon glyphicon-chevron-left"></i>
-        Retour à la liste
-      </a>
-      <a href="{{ path('myd_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
-        <i class="glyphicon glyphicon-edit"></i>
-        Modifier l'annonce
-      </a>
-      <a href="{{ path('myd_platform_delete', {'id': advert.id}) }}" class="btn btn-danger">
-        <i class="glyphicon glyphicon-trash"></i>
-        Supprimer l'annonce
-      </a>
-    </ul>
-  </nav>
+<nav class="advert__nav">
+  <ul>
+    <a href="{{ path('myd_platform_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('myd_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier l'annonce
+    </a>
+    <a href="{{ path('myd_platform_delete', {'id': advert.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'annonce
+    </a>
+  </ul>
+</nav>
 {% endblock %}
 
 

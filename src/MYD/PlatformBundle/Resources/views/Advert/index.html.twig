@@ -18,15 +18,7 @@
     <div class="tab home__content" id="ad">
       <div class="home__card--container flex justifyBetween">
         {% for advert in listAdverts %}
-        <article class="flexColumn home__card home__advert">
-          <a href="{{ path('myd_platform_view', {'id': advert.id}) }}">
-            {{ advert.title }}
-          </a>
-          <span>
-            par {{ advert.author }},
-            le {{ advert.date|date('d/m/Y') }}
-          </span>
-        </article>
+          {{ include("MYDPlatformBundle:Advert:advert_card.html.twig") }}
         {% else %}
         <p>Pas (encore !) d'annonces</p>
         {% endfor %}
@@ -43,34 +35,6 @@
             Disponible de suite
           </span>
         </article>
-               <article class="flexColumn home__card home__card--profile">
-          <a href="">
-            Johnny
-          </a>
-          <span>
-            Developpeur PHP, 
-            Disponible de suite
-          </span>
-        </article>
-               <article class="flexColumn home__card home__card--profile">
-          <a href="">
-            Johnny
-          </a>
-          <span>
-            Developpeur PHP, 
-            Disponible de suite
-          </span>
-        </article>
-               <article class="flexColumn home__card home__card--profile">
-          <a href="">
-            Johnny
-          </a>
-          <span>
-            Developpeur PHP, 
-            Disponible de suite
-          </span>
-        </article>
-
       </div>
     </div>
     {% endblock %}

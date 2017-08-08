@@ -1,0 +1,12 @@
+        <article class="flexColumn home__card home__advert">
+          {% if advert.image is not null %}
+          <img src="{{ advert.image.url }}" alt='{{ advert.image.alt }}'>
+          {% endif %}
+          <a href="{{ path('myd_platform_view', {'id': advert.id}) }}">
+            {{ advert.title }}
+          </a>
+          <span>
+            par {{ advert.author }},
+            le {{ advert.date|date('d/m/Y') }}
+          </span>
+        </article>

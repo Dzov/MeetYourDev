@@ -78,6 +78,8 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: MYD\PlatformBundle\Entity\User
+    group:
+        group_class: MYD\PlatformBundle\Entity\Group
     from_email:
         address: "amelie.haladjian@gmail.com"
         sender_name: "Amelie"
