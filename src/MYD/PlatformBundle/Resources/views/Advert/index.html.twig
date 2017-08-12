@@ -12,8 +12,8 @@
   <section class="centerContainer box flex2">
     {% block advert_body %}
     <div class="home__tabHeader">
-      <button class="home__tab" onclick="openTab('ad')" >Annonces</button>
-      <button class="home__tab" onclick="openTab('profiles')">Profils</button>
+      <button id="adTab" class="home__tab" onclick="openTab('ad'); activeTab('adTab')" >Annonces</button>
+      <button id="profileTab" class="home__tab" onclick="openTab('profiles'); activeTab('profileTab')">Profils</button>
     </div>
     <div class="tab home__content" id="ad">
       <div class="card__container flex">

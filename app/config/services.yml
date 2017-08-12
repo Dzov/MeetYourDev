@@ -27,3 +27,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Advert }
         public: true
+
+    admin.user:
+        class: MYD\PlatformBundle\Admin\UserAdmin
+        arguments: [~, MYD\PlatformBundle\Entity\User, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: User }
+        public: true
