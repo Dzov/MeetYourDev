@@ -16,7 +16,7 @@
       <button class="home__tab" onclick="openTab('profiles')">Profils</button>
     </div>
     <div class="tab home__content" id="ad">
-      <div class="home__card--container flex justifyBetween">
+      <div class="card__container flex">
         {% for advert in listAdverts %}
           {{ include("MYDPlatformBundle:Advert:advert_card.html.twig") }}
         {% else %}
@@ -25,8 +25,8 @@
       </div>
     </div>
     <div class="tab home__content" id="profiles" style="display: none;">
-      <div class="home__card--container flex justifyBetween">
-        <article class="flexColumn home__card home__card--profile">
+      <div class="card__container flex justifyBetween">
+        <article class="flexColumn card profile__card">
           <a href="">
             Johnny
           </a>

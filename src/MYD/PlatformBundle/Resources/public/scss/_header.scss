@@ -5,6 +5,10 @@
 
   &__brand {
     flex: 1;
+
+    &--title {
+      margin: 0;
+    }
   }
 
   &__nav {
