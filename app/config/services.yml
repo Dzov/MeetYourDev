@@ -14,3 +14,16 @@ services:
         # if you need to do this, you can override this setting on individual services
         public: false
 
+    admin.category:
+        class: MYD\PlatformBundle\Admin\CategoryAdmin
+        arguments: [~, MYD\PlatformBundle\Entity\Category, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Category }
+        public: true
+
+    admin.advert:
+        class: MYD\PlatformBundle\Admin\AdvertAdmin
+        arguments: [~, MYD\PlatformBundle\Entity\Advert, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Advert }
+        public: true
